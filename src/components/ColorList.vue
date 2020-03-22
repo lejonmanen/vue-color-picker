@@ -11,7 +11,7 @@
         <div class="form-group">
             <div v-for="c in list" :key="c.color" class="vertical">
                 <div> {{ c.title }} </div>
-                <div class="color-box" :style="{ 'background-color': c.color }"> </div>
+                <div class="color-box" :style="{ 'background-color': c.color }"> {{ inputColor }} </div>
                 <button @click="remove(c.color)">Remove</button>
             </div>
         </div>
@@ -97,6 +97,11 @@ export default {
     min-height: 2em;
     min-width: 5em;
     border: 1px solid black;
+	/* padding: 0.2em; */
+	color: #0a0a0a;
+}
+.color-box:hover {
+	color: #f0f0f0;
 }
 .vertical .color-box {
     width: 11em;
